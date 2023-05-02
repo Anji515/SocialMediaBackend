@@ -4,7 +4,9 @@ const userRouter = require('./routes/userRouter');
 const Authentication = require('./middlewares/authMiddleWare');
 const postsRouter = require('./routes/postRoutes');
 require('dotenv').config();
+const cors=require('cors')
 const app=express();
+app.use(cors())
 
 app.use(express.json());
 app.use('/users',userRouter)
